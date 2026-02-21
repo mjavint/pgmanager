@@ -4,17 +4,9 @@
   <img src="https://github.com/mjavint/pgmanager/blob/main/img/icon.png?raw=true" alt="PostgreSQL Manager Logo" width="128" height="128"/>
 </p>
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/mvintg.pg-manager.svg" alt="Version"/>
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager">
-    <img src="https://img.shields.io/visual-studio-marketplace/rating/mvintg.pg-manager.svg" alt="Rating"/>
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"/>
-  </a>
-</p>
+[![Version](https://img.shields.io/visual-studio-marketplace/v/mvintg.pg-manager)](https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/mvintg.pg-manager)](https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/mvintg.pg-manager)](https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager&ssr=false#review-details)
 
 Complete PostgreSQL database management for VS Code: explorer, connection profiles, SQL editor, query execution, table data viewer, roles, and database operations.
 
