@@ -20,7 +20,17 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 
 ## Features
 
-### 1) Database Explorer
+### 1) Query Builder
+
+![Query Builder](https://github.com/mjavint/pgmanager/blob/main/img/demo-query-builder.gif?raw=true)
+
+- Visual query builder for constructing SQL queries without writing code
+- Drag-and-drop tables/views from explorer to canvas
+- Add/remove tables, joins, and conditions with UI controls
+- Generate SQL from visual design and open in SQL editor
+- Open query builder from table/view/schema/database context in explorer
+
+### 2) Database Explorer
 
 ![Database Explorer](https://github.com/mjavint/pgmanager/blob/main/img/04-sql-editor.png?raw=true)
 
@@ -29,7 +39,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Filter objects by name and clear filters quickly
 - Refresh explorer and node states on demand
 
-### 2) Connection Management
+### 3) Connection Management
 
 ![Connection Management 1](https://github.com/mjavint/pgmanager/blob/main/img/01-connect-form.png?raw=true)
 
@@ -43,7 +53,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - SSL/TLS support in profile configuration
 - Connection management from both explorer context menu and connections UI panel
 
-### 3) SQL Query Editor
+### 4) SQL Query Editor
 
 ![SQL Query Editor](https://github.com/mjavint/pgmanager/blob/main/img/06-query-results.png?raw=true)
 
@@ -53,13 +63,13 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Save SQL to file (`Ctrl+S` / `Cmd+S`)
 - Request and use schema metadata in-editor for better authoring
 
-### 4) Query Results Panel
+### 5) Query Results Panel
 
 - Multi-result rendering with column metadata
 - Row count and elapsed time
 - SQL notices/errors surfaced in UI
 
-### 5) Table Data Viewer
+### 6) Table Data Viewer
 
 - View table/view data in a paginated grid
 - Server-side page fetch with sort and filter support
@@ -69,7 +79,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Global text search in loaded page
 - CSV export of visible/selected rows
 
-### 6) Table Structure & Alter Table
+### 7) Table Structure & Alter Table
 
 ![Table Structure & Alter Table](https://github.com/mjavint/pgmanager/blob/main/img/view-data.gif?raw=true)
 
@@ -83,7 +93,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
   - Add column
   - Drop column
 
-### 7) Role/User Management
+### 8) Role/User Management
 
 ![Role](https://github.com/mjavint/pgmanager/blob/main/img/07-create-role.png?raw=true)
 
@@ -93,12 +103,12 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Drop role/user
 - Manage role privileges
 
-### 8) Database Operations
+### 9) Database Operations
 
 - Create database
 - Drop database
 
-### 9) SQL Code Generation
+### 10) SQL Code Generation
 
 ![SQL Code Generation](https://github.com/mjavint/pgmanager/blob/main/img/05-sql-completion.png?raw=true)
 
@@ -106,7 +116,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Generate `INSERT`
 - Generate `CREATE TABLE`
 
-### 10) SQL Autocompletion
+### 11) SQL Autocompletion
 
 - Context-aware completions based on schema metadata
 - Suggestions for schemas, tables, columns, keywords, built-in functions, and types

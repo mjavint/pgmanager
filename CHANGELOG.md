@@ -1,11 +1,16 @@
 # Changelog
 
-All notable changes to this extension will be documented in this file.
+## [0.2.0] - 2024-06-15
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### Added Query Builder
 
-## [Released]
+![Query Builder](https://github.com/mjavint/pgmanager/blob/main/img/demo-query-builder.gif?raw=true)
+
+- Visual query builder for constructing SQL queries without writing code
+- Drag-and-drop tables/views from explorer to canvas
+- Add/remove tables, joins, and conditions with UI controls
+- Generate SQL from visual design and open in SQL editor
+- Open query builder from table/view/schema/database context in explorer
 
 ## [0.1.0] - 2024-02-18
 
