@@ -203,8 +203,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Support
 
-Issues and feature requests: https://github.com/mjavint/pg-manager/issues
-
----
-
-<p align="center">Made with ❤️ for PostgreSQL developers</p>
+Issues and feature requests: https://github.com/mjavint/pgmanager/issues
