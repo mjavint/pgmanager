@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.1] - 2026-02-22
+
+### Added SQL Editor Improvements
+
+ Copy, Paste, Cut, and Select All buttons in SQL Editor toolbar
+ Keyboard shortcuts: Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+A
+ Context menu enabled for Monaco editor
+ Copy with syntax highlighting support
+
+### Added Autocomplete Enhancements
+
+ PostgreSQL operators autocomplete (=, !=, <, >, <=, >=, AND, OR, BETWEEN, IN, LIKE, ILIKE, etc.)
+ SQL clause snippets (SELECT, INSERT, UPDATE, DELETE, JOIN, CREATE TABLE, etc.)
+ Context-aware completions for ORDER BY, GROUP BY, HAVING, LIMIT, OFFSET clauses
+ Table alias support: auto-detect aliases and suggest columns with prefix
+ Improved column suggestions with PK badges
+ Snippet priority and better sorting
+
 ## [0.3.0] - 2026-02-22
 
 ### Added Table Structure Designer
