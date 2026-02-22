@@ -83,15 +83,18 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 
 ![Table Structure & Alter Table](https://github.com/mjavint/pgmanager/blob/main/img/view-data.gif?raw=true)
 
-- Open table structure panel with:
-  - Column list (type, nullability, default, PK)
-  - Indexes (unique/primary)
-  - Constraints
+- Open table structure panel with modern React UI
+- Tabbed interface for columns, indexes, foreign keys, and constraints
+- Inline editing for columns (name, type, nullable, default value)
+- SQL preview before applying changes
+- Add, modify, and delete columns directly from the UI
 - Alter table actions:
   - Rename column
   - Change column type
-  - Add column
+  - Add column (with data type and nullable settings)
   - Drop column
+  - Set column nullable / NOT NULL
+  - Set column default value
 
 ### 8) Role/User Management
 

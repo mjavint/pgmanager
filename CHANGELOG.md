@@ -1,6 +1,22 @@
 # Changelog
 
-## [0.2.0] - 2024-06-15
+## [0.3.0] - 2026-02-22
+
+### Added Table Structure Designer
+
+![Table Structure Designer](https://github.com/mjavint/pgmanager/blob/main/img/design-table.png?raw=true)
+
+- New table structure panel for visualizing and modifying table schema
+- Tabbed interface for columns, indexes, foreign keys, and constraints
+- Inline editing for columns (name, type, nullable, default value)
+- SQL preview before applying changes
+- Add, modify, and delete columns directly from the UI
+- Rename column, change column type, and column operations
+- Set column nullable and default values
+- Better error handling and loading states
+- Improved alter table operations with transaction support
+
+## [0.2.0] - 2026-02-21
 
 ### Added Query Builder
 
@@ -12,7 +28,7 @@
 - Generate SQL from visual design and open in SQL editor
 - Open query builder from table/view/schema/database context in explorer
 
-## [0.1.0] - 2024-02-18
+## [0.1.0] - 2026-02-20
 
 ### Added
 
@@ -38,6 +54,3 @@
 - Context menu actions in explorer
 - Keyboard shortcuts for common operations
 - Configurable query timeouts and connection pools
-
-[Released]: https://github.com/mjavint/pg-manager/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/mjavint/pg-manager/releases/tag/v0.1.0
