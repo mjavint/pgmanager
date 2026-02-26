@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.4.0] - 2026-02-26
+
+### Added Favorite Queries
+
+![Favorite Queries](https://github.com/mjavint/pgmanager/blob/main/img/sql-favorites.png?raw=true)
+
+- Save SQL queries to favorites directly from the SQL Editor toolbar
+- Collapsible side panel to browse, search, and manage favorite queries
+- Card-based UI for each favorite with name, date, and full SQL preview
+- Click a favorite card to load the query into the editor instantly
+- Search/filter favorites by any keyword in name or SQL content
+- Favorites are persisted in user settings (`pg.favoriteQueries`)
+
+### Added Database Owner Management
+
+- Change database owner from the explorer context menu
+
+![Database Owner Management](https://github.com/mjavint/pgmanager/blob/main/img/change-owner.png?raw=true)
+
+### Improved
+
+- SQL Editor now adapts to the active VS Code color theme (light, dark, high contrast)
+
 ## [0.3.1] - 2026-02-22
 
 ### Added SQL Editor Improvements
