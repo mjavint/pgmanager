@@ -167,7 +167,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 
 1. Open VS Code
 2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for `PostgreSQL Manager`
+3. Search for `PostgreSQL Manager (mvintg)`
 4. Click Install
 
 Marketplace: https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manager
