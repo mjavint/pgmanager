@@ -62,6 +62,10 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Cancel running query (`Ctrl+Shift+C` / `Cmd+Shift+C`)
 - Save SQL to file (`Ctrl+S` / `Cmd+S`)
 - Request and use schema metadata in-editor for better authoring
+- Copy, Paste, Cut, and Select All buttons in toolbar
+- Copy (`Ctrl+C`), Paste (`Ctrl+V`), Cut (`Ctrl+X`), Select All (`Ctrl+A`)
+- Context menu with copy/paste support
+- Enhanced autocomplete with operators, snippets, and table aliases
 
 ### 5) Query Results Panel
 
@@ -78,6 +82,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Foreign key lookup popover for FK columns
 - Global text search in loaded page
 - CSV export of visible/selected rows
+- Truncate table with RESTART IDENTITY and CASCADE options
 
 ### 7) Table Structure & Alter Table
 
@@ -110,6 +115,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 
 - Create database
 - Drop database
+- Change database owner
 
 ### 10) SQL Code Generation
 
@@ -118,6 +124,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Generate `SELECT TOP 1000`
 - Generate `INSERT`
 - Generate `CREATE TABLE`
+- Show DDL (Display CREATE statement for tables, views, functions, and sequences)
 
 ### 11) SQL Autocompletion
 
@@ -136,13 +143,18 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 | `pg.newQuery` | Open SQL editor |
 | `pg.runQuery` / `pg.cancelQuery` / `pg.saveQuery` | Query execution controls |
 | `pg.explainQuery` | Run EXPLAIN for SQL |
+| `pg.openQueryBuilder` | Open query builder from context |
+| `pg.openQueryBuilderFromConnection` | Open query builder from connection |
 | `pg.viewTableData` | Open table data grid |
 | `pg.viewTableStructure` | Open table structure view |
 | `pg.alterTable` | Open alter table actions |
+| `pg.truncateTable` | Truncate table with options |
 | `pg.createDatabase` / `pg.dropDatabase` | Database lifecycle |
+| `pg.changeDatabaseOwner` | Change database owner |
 | `pg.createRole` / `pg.alterRole` / `pg.dropRole` | Role lifecycle |
 | `pg.managePrivileges` / `pg.viewRoles` / `pg.refreshRoles` | Role administration |
 | `pg.generateSelectTop` / `pg.generateInsert` / `pg.generateCreateTable` | SQL generators |
+| `pg.showDDL` | Show CREATE statement for database objects |
 | `pg.copyName` | Copy selected object name |
 
 ## Requirements
@@ -191,14 +203,6 @@ Marketplace: https://marketplace.visualstudio.com/items?itemName=mvintg.pg-manag
 
 - The table data viewer currently supports edit/delete workflows in-grid.
 - If you need to add records, use SQL editor (`INSERT ...`) or generated insert templates.
-
-## Development
-
-```bash
-npm install
-npm run compile
-npm run watch
-```
 
 ## License
 
