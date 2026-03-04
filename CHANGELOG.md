@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.5.0] - 2026-03-04
+
+### Added Truncate Table
+
+![Truncate Table](https://github.com/mjavint/pgmanager/blob/main/img/00-truncate-table.png?raw=true)
+![Truncate Table](https://github.com/mjavint/pgmanager/blob/main/img/01-truncate-table.png?raw=true)
+
+- Truncate tables directly from the explorer context menu
+- Options dialog with RESTART IDENTITY and CASCADE checkboxes
+- Confirmation modal before executing truncation
+
+### Added Show DDL
+
+![Show DDL](https://github.com/mjavint/pgmanager/blob/main/img/show-ddl.png?raw=true)
+
+- View DDL (Data Definition Language) for tables, views, functions, and sequences
+- Available from the explorer context menu on supported node types
+- Opens generated SQL in a new editor tab
+
 ## [0.4.0] - 2026-02-26
 
 ### Added Favorite Queries
