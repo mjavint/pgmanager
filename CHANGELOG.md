@@ -4,6 +4,8 @@
 
 ### Added Database Schema Modeler
 
+![Database Schema Modeler](https://github.com/mjavint/pgmanager/blob/main/img/db-modeler.gif?raw=true)
+
 A full visual schema designer for PostgreSQL, accessible via right-click on any database or schema in the explorer.
 
 #### Visual Canvas
