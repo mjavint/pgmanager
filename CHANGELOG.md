@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.6.0] - 2026-03-22
+
+### Added Database Schema Modeler
+
+A full visual schema designer for PostgreSQL, accessible via right-click on any database or schema in the explorer.
+
+#### Visual Canvas
+- Interactive ERD canvas powered by ReactFlow with pan, zoom, and drag
+- Auto-layout engine using **dagre** (Left→Right or Top→Bottom direction)
+- Minimap for quick navigation on large schemas
+- Reverse-engineer existing schemas into diagrams automatically
+
+#### Table Design
+- Create new tables graphically with the **+ New Table** button
+- Double-click any table node to open the column editor
+- Full column editor: name, type, length, precision/scale, PK, Unique, Nullable, Default, Check constraint
+- 30+ supported PostgreSQL data types in dropdown
+- Visual indicators on nodes: `🔑` Primary Key, `🔗` Foreign Key, `U` Unique, `?` Nullable
+
+#### Relationship Types
+- Draw connections between tables to define relationships
+- **Many to One (N:1)**: automatically adds a FK column (`{target}_id`) to the source table
+- **One to Many (1:N)**: automatically adds a FK column (`{source}_id`) to the target table
+- **Many to Many (M:N)**: automatically creates a junction table (`{a}_{b}_rel`) with composite PK and two FK columns
+- Relationship type dialog shown on every new connection
+
+#### FK Edge Properties
+- Click any relationship edge to open the FK properties panel
+- Edit constraint name, ON DELETE action, and ON UPDATE action
+- Supported actions: NO ACTION, RESTRICT, CASCADE, SET NULL, SET DEFAULT
+- Delete relationships directly from the panel
+
+#### DDL Generation & Apply
+- **Save Changes**: generates complete DDL (`CREATE TABLE`, `ALTER TABLE ... ADD CONSTRAINT FOREIGN KEY`, `CREATE INDEX` for FK columns) and opens it in a SQL editor tab
+- **Apply to DB**: executes the generated DDL directly against the connected database inside a transaction — with confirmation dialog and rollback on error
+- Type modifiers included: `varchar(n)`, `numeric(p,s)`, etc.
+- `NOT NULL`, `DEFAULT`, `CHECK`, `PRIMARY KEY`, `UNIQUE` constraints generated correctly
+
+#### Undo / Redo & Persistence
+- Full undo/redo stack (`Ctrl+Z` / `Ctrl+Y` or `Ctrl+Shift+Z`)
+- Diagram layout auto-saved to `.vscode/pg-modeler/{schema}.layout.json`
+- Node positions restored automatically on next open
+
 ## [0.5.0] - 2026-03-04
 
 ### Added Truncate Table

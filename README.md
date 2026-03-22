@@ -126,7 +126,29 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Generate `CREATE TABLE`
 - Show DDL (Display CREATE statement for tables, views, functions, and sequences)
 
-### 11) SQL Autocompletion
+### 11) Database Schema Modeler
+
+![Database Schema Modeler](https://github.com/mjavint/pgmanager/blob/main/img/db-modeler.gif?raw=true)
+
+A full visual schema designer for PostgreSQL — right-click any database or schema in the explorer and select **Open Database Modeler**.
+
+- **Reverse-engineer** existing schemas into interactive ERD diagrams automatically
+- **Interactive canvas** with pan, zoom, drag, and minimap navigation
+- **Auto-layout** using dagre (Left→Right or Top→Bottom)
+- **Create tables** graphically with a full column editor:
+  - Name, type (30+ PostgreSQL types), length, precision/scale
+  - Primary Key, Unique, Nullable, Default value, Check constraint
+- **Visual relationship designer** — draw connections between tables and choose the type:
+  - **Many to One (N:1)**: adds FK column to source table automatically
+  - **One to Many (1:N)**: adds FK column to target table automatically
+  - **Many to Many (M:N)**: creates a junction table with composite PK automatically
+- **FK edge properties panel** — configure constraint name, ON DELETE, ON UPDATE actions
+- **DDL generation**: complete `CREATE TABLE`, `ALTER TABLE ... ADD CONSTRAINT FOREIGN KEY`, and `CREATE INDEX` statements
+- **Apply to DB**: execute the DDL directly against the connected database in a transaction
+- **Undo/Redo** (`Ctrl+Z` / `Ctrl+Y`) with full history stack
+- **Layout persistence**: node positions saved to `.vscode/pg-modeler/{schema}.layout.json`
+
+### 12) SQL Autocompletion
 
 - Context-aware completions based on schema metadata
 - Suggestions for schemas, tables, columns, keywords, built-in functions, and types
@@ -156,6 +178,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 | `pg.generateSelectTop` / `pg.generateInsert` / `pg.generateCreateTable` | SQL generators |
 | `pg.showDDL` | Show CREATE statement for database objects |
 | `pg.copyName` | Copy selected object name |
+| `pg.openDatabaseModeler` | Open visual schema modeler for a database/schema |
 
 ## Requirements
 
