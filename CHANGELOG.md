@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.6.1] - 2026-03-23
+
+### Fixed — Database Schema Modeler
+
+- **FK constraints for `one2many` relationships were never generated**: the `generateDDL` logic looked for the FK column in the source node (the "one" table), but for `one2many` the FK column lives in the target node (the "many" table). The direction of the `ALTER TABLE ... ADD CONSTRAINT FOREIGN KEY` is now corrected for this relationship type.
+- **Relationships were not displayed when reopening the modeler**: layout edges were overwriting the edges just loaded from the database. The layout file now saves and restores **only node positions**, never edges.
+- **Relationships were not refreshed after "Apply to DB"**: after executing the DDL successfully, the backend now automatically reloads the schema from the DB and sends the updated data to the webview.
+- **Loading without feedback**: added loading overlay with spinner while fetching and rendering the schema, both on initial load and after applying changes.
+
+### Added — Modeler Toolbar
+
+- Complete redesign of the toolbar with representative SVG icons for each action
+- Buttons grouped with visual separators: **New Table** | **Undo / Redo** | **LR / TB / Auto Layout** | **Save / Apply to DB**
+- Visual toggle for layout direction (LR / TB) with highlighted active state
+- Icon-only buttons for Undo/Redo with descriptive tooltips
+
+### Added — Selective Explorer Refresh
+
+Feature proposed by [Esteban Acevedo Santana](https://github.com/acevedoesteban999) in [#3](https://github.com/mjavint/pgmanager/issues/3)
+
+- **Refresh Database** (`pg.refreshDatabase`): reloads only the subtree of a database without affecting the rest of the explorer. Available in the context menu and as an inline button when hovering over a database node.
+- **Refresh Schema** (`pg.refreshSchema`): reloads only the tables, views, functions, and sequences of a specific schema.
+- **Refresh Table / View** (`pg.refreshTable`): reloads only the columns of a specific table or view.
+
 ## [0.6.0] - 2026-03-22
 
 ### Added Database Schema Modeler

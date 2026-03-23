@@ -37,7 +37,7 @@ Complete PostgreSQL database management for VS Code: explorer, connection profil
 - Browse servers, databases, schemas, tables, views, functions, sequences, and roles
 - Expand/collapse hierarchy with context-aware actions per node
 - Filter objects by name and clear filters quickly
-- Refresh explorer and node states on demand
+- **Refresh selectivo**: refresca solo una base de datos, schema o tabla/vista sin recargar todo el árbol
 
 ### 3) Connection Management
 
@@ -144,9 +144,10 @@ A full visual schema designer for PostgreSQL — right-click any database or sch
   - **Many to Many (M:N)**: creates a junction table with composite PK automatically
 - **FK edge properties panel** — configure constraint name, ON DELETE, ON UPDATE actions
 - **DDL generation**: complete `CREATE TABLE`, `ALTER TABLE ... ADD CONSTRAINT FOREIGN KEY`, and `CREATE INDEX` statements
-- **Apply to DB**: execute the DDL directly against the connected database in a transaction
+- **Apply to DB**: execute the DDL directly against the connected database in a transaction — schema reloads automatically from DB after apply
 - **Undo/Redo** (`Ctrl+Z` / `Ctrl+Y`) with full history stack
 - **Layout persistence**: node positions saved to `.vscode/pg-modeler/{schema}.layout.json`
+- **Loading indicator**: spinner overlay while the schema is being fetched and rendered
 
 ### 12) SQL Autocompletion
 
@@ -160,7 +161,10 @@ A full visual schema designer for PostgreSQL — right-click any database or sch
 | `pg.showConnections` | Open connections panel |
 | `pg.addConnection` / `pg.editConnection` / `pg.removeConnection` | Manage profiles |
 | `pg.connect` / `pg.disconnect` | Connect or disconnect server |
-| `pg.refreshExplorer` | Refresh explorer tree |
+| `pg.refreshExplorer` | Refresh entire explorer tree |
+| `pg.refreshDatabase` | Refresh a single database subtree (context menu on database node) |
+| `pg.refreshSchema` | Refresh a single schema subtree (context menu on schema node) |
+| `pg.refreshTable` | Refresh columns of a single table or view (context menu on table/view node) |
 | `pg.filterTables` / `pg.clearTableFilter` | Filter/clear explorer objects |
 | `pg.newQuery` | Open SQL editor |
 | `pg.runQuery` / `pg.cancelQuery` / `pg.saveQuery` | Query execution controls |
