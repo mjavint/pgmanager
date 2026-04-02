@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.7.0] - 2026-04-01
+
+### Fixed unknown issues in Database Schema Modeler
+
+- **Webview showing blank screen**: Fixed CSP (Content Security Policy) that was too restrictive, blocking React Flow resources
+- **Replaced dagre with simple grid layout**: Removed Node.js-dependent dagre library that caused issues in webview context, now using lightweight grid layout
+- **Improved error handling**: Added ErrorBoundary with detailed error display in webview
+- **Console logging for debugging**: Added structured logging for troubleshooting webview issues
+- **Webview loading overlay**: Shows loading spinner while fetching schema, error states, and empty state when no tables found
+
 ## [0.6.1] - 2026-03-23
 
 ### Fixed — Database Schema Modeler
@@ -33,12 +43,14 @@ Feature proposed by [Esteban Acevedo Santana](https://github.com/acevedoesteban9
 A full visual schema designer for PostgreSQL, accessible via right-click on any database or schema in the explorer.
 
 #### Visual Canvas
+
 - Interactive ERD canvas powered by ReactFlow with pan, zoom, and drag
 - Auto-layout engine using **dagre** (Left→Right or Top→Bottom direction)
 - Minimap for quick navigation on large schemas
 - Reverse-engineer existing schemas into diagrams automatically
 
 #### Table Design
+
 - Create new tables graphically with the **+ New Table** button
 - Double-click any table node to open the column editor
 - Full column editor: name, type, length, precision/scale, PK, Unique, Nullable, Default, Check constraint
@@ -46,6 +58,7 @@ A full visual schema designer for PostgreSQL, accessible via right-click on any 
 - Visual indicators on nodes: `🔑` Primary Key, `🔗` Foreign Key, `U` Unique, `?` Nullable
 
 #### Relationship Types
+
 - Draw connections between tables to define relationships
 - **Many to One (N:1)**: automatically adds a FK column (`{target}_id`) to the source table
 - **One to Many (1:N)**: automatically adds a FK column (`{source}_id`) to the target table
@@ -53,18 +66,21 @@ A full visual schema designer for PostgreSQL, accessible via right-click on any 
 - Relationship type dialog shown on every new connection
 
 #### FK Edge Properties
+
 - Click any relationship edge to open the FK properties panel
 - Edit constraint name, ON DELETE action, and ON UPDATE action
 - Supported actions: NO ACTION, RESTRICT, CASCADE, SET NULL, SET DEFAULT
 - Delete relationships directly from the panel
 
 #### DDL Generation & Apply
+
 - **Save Changes**: generates complete DDL (`CREATE TABLE`, `ALTER TABLE ... ADD CONSTRAINT FOREIGN KEY`, `CREATE INDEX` for FK columns) and opens it in a SQL editor tab
 - **Apply to DB**: executes the generated DDL directly against the connected database inside a transaction — with confirmation dialog and rollback on error
 - Type modifiers included: `varchar(n)`, `numeric(p,s)`, etc.
 - `NOT NULL`, `DEFAULT`, `CHECK`, `PRIMARY KEY`, `UNIQUE` constraints generated correctly
 
 #### Undo / Redo & Persistence
+
 - Full undo/redo stack (`Ctrl+Z` / `Ctrl+Y` or `Ctrl+Shift+Z`)
 - Diagram layout auto-saved to `.vscode/pg-modeler/{schema}.layout.json`
 - Node positions restored automatically on next open
@@ -115,19 +131,19 @@ A full visual schema designer for PostgreSQL, accessible via right-click on any 
 
 ### Added SQL Editor Improvements
 
- Copy, Paste, Cut, and Select All buttons in SQL Editor toolbar
- Keyboard shortcuts: Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+A
- Context menu enabled for Monaco editor
- Copy with syntax highlighting support
+Copy, Paste, Cut, and Select All buttons in SQL Editor toolbar
+Keyboard shortcuts: Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+A
+Context menu enabled for Monaco editor
+Copy with syntax highlighting support
 
 ### Added Autocomplete Enhancements
 
- PostgreSQL operators autocomplete (=, !=, <, >, <=, >=, AND, OR, BETWEEN, IN, LIKE, ILIKE, etc.)
- SQL clause snippets (SELECT, INSERT, UPDATE, DELETE, JOIN, CREATE TABLE, etc.)
- Context-aware completions for ORDER BY, GROUP BY, HAVING, LIMIT, OFFSET clauses
- Table alias support: auto-detect aliases and suggest columns with prefix
- Improved column suggestions with PK badges
- Snippet priority and better sorting
+PostgreSQL operators autocomplete (=, !=, <, >, <=, >=, AND, OR, BETWEEN, IN, LIKE, ILIKE, etc.)
+SQL clause snippets (SELECT, INSERT, UPDATE, DELETE, JOIN, CREATE TABLE, etc.)
+Context-aware completions for ORDER BY, GROUP BY, HAVING, LIMIT, OFFSET clauses
+Table alias support: auto-detect aliases and suggest columns with prefix
+Improved column suggestions with PK badges
+Snippet priority and better sorting
 
 ## [0.3.0] - 2026-02-22
 
